@@ -28,7 +28,6 @@ export class MapContainer extends React.Component {
 		var client = mqtt.connect('ws://3.15.28.103:3000');
 
 		client.subscribe('LOCATION');
-		client.subscribe('TEMP');
 
 		client.on('connect', function() {
 			console.log('connected!');
@@ -39,11 +38,6 @@ export class MapContainer extends React.Component {
 			switch (topic) {
 				case 'LOCATION':
 					this.updateMap(message);
-					break;
-			}
-			switch (topic) {
-				case 'TEMP':
-					document.getElementById('TEMP').innerHTML = message.toString();
 					break;
 			}
 		});
