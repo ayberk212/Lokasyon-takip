@@ -8,10 +8,10 @@ function initMap() {
 	var symbol = {
 		// url: 'car.png',
 		path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-		fillColor: 'red',
+		fillColor: 'blue',
 		fillOpacity: 0.9,
-		strokeWeight: 6,
-		scale: 8,
+		strokeWeight: 4,
+		scale: 7,
 		rotation: 0,
 	};
 
@@ -27,7 +27,7 @@ var client = mqtt.connect('ws://3.15.28.103:3000');
 client.subscribe('LOCATION');
 
 client.on('connect', function() {
-	console.log('connected!');
+	console.log('connected!dd');
 });
 
 client.on('message', function(topic, message) {
