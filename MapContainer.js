@@ -40,9 +40,6 @@ export class MapContainer extends React.Component {
 				case 'LOCATION':
 					this.updateMap(message);
 					break;
-				case 'TEMP':
-					document.getElementById('TEMP').innerHTML = message.toString();
-					break;
 				default:
 					break;
 			}
